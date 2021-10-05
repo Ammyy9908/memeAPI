@@ -10,7 +10,7 @@ from werkzeug.wrappers import response
 app = Flask(__name__)
 
 def getMemes():
-    url = "https://www.memedroid.com/memes/tag/developer"
+    url = "https://www.memedroid.com/memes/tag/programming"
     response = requests.get(url)
     soup = BeautifulSoup(response.content,'lxml')
     divs = soup.find_all('div',class_='item-aux-container')
